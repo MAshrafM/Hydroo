@@ -1,0 +1,21 @@
+{
+  "name": "hydroo",
+  "version": "1.0.0",
+  "description": "a front end website from a psd file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MAshraf",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "style-loader": "^0.23.1",
+    "webpack-dev-server": "^3.1.9",
+    "wepback": "^1.0.0"
+  }
+}
