@@ -15,12 +15,25 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['env']
+        presets: ['@babel/preset-env']
       }
     },
     {
       test: /\.scss$/,
       use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader','sass-loader']
+    },
+    {
+      test: /\.(gif|png|jpg|svg)$/i,
+      loader: 'image-webpack-loader',
+      enforce: 'pre',
+      options: {
+        disable: true
+      }
+    },
+    {
+      test: /\.(gif|png|jpg|svg)$/i,
+      exclude: /node_modules/,
+      loader: 'url-loader'
     }
     ]
   },

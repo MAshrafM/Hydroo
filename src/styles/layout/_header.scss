@@ -1,0 +1,21 @@
+.h-header{
+  height: 100vh;
+  
+  background: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  display: flex;
+  flex-direction: column;
+  
+  &__hero{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    @include breakpoint(tablet){
+      padding-top: 0;
+    }
+  }
+}

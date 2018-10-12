@@ -1,0 +1,29 @@
+.btn{
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  white-space: nowrap;
+  border: 0;
+  
+  display: inline-block;
+  padding: 15px 25px;
+  
+  transition: all 0.2s;
+  
+  &__white{
+    color: black;
+    background-color: white;
+    &:hover{
+      box-shadow: inset 0 0 0 5px #d3d3d3;
+    }
+  }
+  
+  &__blue{
+    background-color: $turquoise;
+    color: white;
+    &:hover{
+      box-shadow: inset 0 0 0 5px #14aabf;
+    }
+  }
+}

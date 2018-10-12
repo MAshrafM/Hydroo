@@ -1,7 +1,5 @@
 @import 'plugin/plugin';
 @import 'helpers/helpers';
 @import 'basic/basic';
-
-body{
-  background-color: #eee;
-}
+@import 'layout/layout';
+@import 'mods/mods';

@@ -1,0 +1,61 @@
+.hero-content{
+  text-align: center;
+  
+  &__heading{
+    margin-bottom: 50px;
+    position: relative;
+    @include breakpoint(landscape){
+      margin-bottom: 35px;
+    }
+    @include breakpoint(tablet){
+      margin-bottom: 60px;
+    }
+    
+    &::after{
+      content: '';
+      height: 2px;
+      width: 100px;
+      
+      background-color: $turquoise;
+      position: absolute;
+      bottom: -20px;
+      @include horizontal-align(absolute);
+      @include breakpoint(landscape){
+        bottom: -15px;
+      }
+      @include breakpoint(tablet){
+        bottom: -35px;
+      }
+    }
+    
+    .heading-highlight{
+      color: $turquoise;
+    }
+  }
+  
+  &__text{
+    font-size: 1.62em;
+    font-family: 'droidSerif', serif;
+    line-height: 1.5em;
+    
+    width: 90%;
+    margin: 0 auto 30px;
+    color: white;
+    
+    @include breakpoint(landscape){
+      font-size: 1.42em;
+      margin: 0 auto 20px;
+    }
+    @include breakpoint(tablet){
+      font-size: 1.8em;
+      margin: 0 auto 40px;
+    }
+  }
+  
+  &__btns > a{
+    margin: 5px;
+    @include breakpoint(tablet){
+      margin: 0 5px;
+    }
+  }
+}
