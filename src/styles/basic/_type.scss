@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Raleway:400,800,900');
+
+body{
+  font-size: 62.5%;
+}
+
+ h1, h2, h3, h4{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+h1{
+  font-size: 3.5em;
+  font-weight: 900;
+  color: white;
+  @include breakpoint(landscape){
+      font-size: 3em;
+  }
+  @include breakpoint(tablet){
+      font-size: 7em;
+  }
+}
+h2{
+  font-size: 2.1em;
+  font-weight: 900;
+  @include breakpoint(tablet){
+      font-size: 3em;
+  }
+}
+h3{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+h4{
+  font-size: 1.3em;
+  font-weight: 800;
+}
+p, li{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.26em;
+  color: $grey;
+  line-height: 1.60em;
+  @include breakpoint(tablet){
+      font-size: 1.4em;
+  }
+}
+

@@ -1,4 +1,6 @@
-@import './helpers/helpers';
+@import 'plugin/plugin';
+@import 'helpers/helpers';
+@import 'basic/basic';
 
 body{
   background-color: #eee;
