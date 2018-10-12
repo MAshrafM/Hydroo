@@ -4,18 +4,26 @@
   "description": "a front end website from a psd file",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start:dev": "webpack-dev-server"
   },
   "author": "MAshraf",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack-dev-server": "^3.1.9",
-    "wepback": "^1.0.0"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }
