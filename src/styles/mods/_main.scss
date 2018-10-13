@@ -1,0 +1,50 @@
+.panel{
+  &__heading{
+    margin-bottom: 20px;
+    
+    position: relative;
+    @include breakpoint(tablet){
+      margin-bottom: 35px;
+    }
+    
+    &__with-lodash{
+      margin-bottom: 40px;
+      @include breakpoint(tablet){
+        margin-bottom: 65px;
+      }
+      
+      &::after{
+        content: '';
+        width: 35px;
+        height: 3px;
+        background-color: black;
+        
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        @include breakpoint(tablet){
+          bottom: -25px;
+        }
+      }
+    }
+  }
+  
+  &__text{
+    margin-bottom: 30px;
+  }
+  
+  &__image{
+    box-shadow: 14px 14px 1px $softRed;
+    
+    width: 95%;
+    margin-top: 50px;
+    @include breakpoint(landscape){
+      width: auto;
+      max-width: 100%;
+    }
+    @include breakpoint(tablet){
+      @include transform(translateY(-40px));
+      margin-top: 0;
+    }
+  }
+}
