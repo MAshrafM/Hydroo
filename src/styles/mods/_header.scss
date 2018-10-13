@@ -59,3 +59,18 @@
     }
   }
 }
+
+.navbar-flex{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include breakpoint(landscape){
+    max-width: 960px;
+  }
+}
