@@ -60,6 +60,10 @@
       @include transform(translateY(-40px));
       margin-top: 0;
     }
+    
+    &__no-shadow{
+      box-shadow: none;
+    }
   }
   
   &__white{
