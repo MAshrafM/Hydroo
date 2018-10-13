@@ -27,4 +27,15 @@
       background: $coal;
     }
   }
+  
+  &__navbar-main{
+    flex-basis: 70px;
+    background-color: $darkGrey;
+    @include breakpoint(landscape){
+      flex-basis: 50px;
+    }
+    @include breakpoint(tablet){
+      flex-basis: 50px;
+    }
+  }
 }

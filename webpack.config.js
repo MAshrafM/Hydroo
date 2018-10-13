@@ -34,6 +34,12 @@ module.exports = {
       test: /\.(gif|png|jpg|svg)$/i,
       exclude: /node_modules/,
       loader: 'url-loader'
+    },
+    {
+      test: /\.(html)$/,
+      use: [{
+        loader: 'html-loader'
+      }]
     }
     ]
   },
