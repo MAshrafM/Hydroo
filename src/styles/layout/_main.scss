@@ -8,3 +8,13 @@
     padding: 45px 0;
   }
 }
+
+.h-bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  &__passion{
+    background-image: url(../images/passion-bg.jpg);
+  }
+}
