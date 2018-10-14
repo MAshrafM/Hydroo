@@ -1,0 +1,33 @@
+.opinion{
+
+    &__image{
+        margin-bottom: 30px;
+    }
+
+    &__quote{
+        font-size: 1.62em;
+        font-style: italic;
+        color: black;
+        margin-bottom: 40px;
+        @include breakpoint(tablet){
+            font-size: 1.8em;
+        }
+    }
+
+    &__name{
+        font-size: 1.17em;
+        margin-bottom: 5px;
+        @include breakpoint(tablet){
+            font-size: 1.3em;
+        }
+    }
+
+    &__credentials{
+        font-family: 'Raleyway', sans-serif;
+        font-size: 1.17em;
+        text-transform: uppercase;
+        @include breakpoint(tablet){
+            font-size: 1.3em;
+        }
+    }
+}
