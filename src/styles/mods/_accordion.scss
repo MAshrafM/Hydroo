@@ -1,0 +1,49 @@
+.accordion{
+    margin-bottom: 30px;
+    &:last-child{
+        margin-bottom: 80px;
+    }
+
+    &__toggle{
+        height: 50px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $lightGrey;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &__is-active{
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+            i {
+                @include transform(rotate(180deg));
+            }
+        }
+
+        &__is-active, &:hover{
+            color: $turquoise;
+        }
+    }
+
+    &__heading{
+        font-size: 1.4em;
+    }
+
+    &__contents{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        &__is-active{
+            max-height: 300px;
+        }
+        & > p{
+            padding: 20px;
+            border-right: 1px solid $lightGrey;
+            border-left: 1px solid $lightGrey;
+        }
+        & > p:last-child{
+            border-bottom: 1px solid $lightGrey;
+        }
+    }
+}

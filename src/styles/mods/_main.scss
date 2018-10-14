@@ -34,8 +34,16 @@
         font-size: 3.6em;
       }
     }
+
+    &__like{
+      font-weight: 700;
+      text-transform: uppercase;
+      color: black;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
   }
-  
+
   &__text{
     margin-bottom: 30px;
     
@@ -67,6 +75,13 @@
     
     &__no-shadow{
       box-shadow: none;
+    }
+
+    &__space-bottom{
+      margin-bottom: 50px;
+      @include breakpoint(tablet){
+        margin-bottom: 0;
+      }
     }
   }
   
@@ -175,4 +190,16 @@
   @include breakpoint(desktop){
     @include transform(translateY(2px));
   }
+
+  &__abs-pos{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.divide-rows{
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $lightGrey, rgba(0, 0, 0, 0));
+  margin: 60px 0;
 }
