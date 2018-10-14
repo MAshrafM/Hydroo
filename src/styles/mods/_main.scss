@@ -60,6 +60,10 @@
       @include transform(translateY(-40px));
       margin-top: 0;
     }
+
+    @include breakpoint(desktop){
+      margin-top: 50px;
+    }
     
     &__no-shadow{
       box-shadow: none;
@@ -156,5 +160,19 @@
 
   &__text{
     color: white;
+  }
+}
+
+.model{
+  width: 100%;
+  @include transform(translateY(1px));
+  @include breakpoint(landscape){
+    width: auto;
+  }
+  @include breakpoint(tablet){
+    width: 100%;
+  }
+  @include breakpoint(desktop){
+    @include transform(translateY(2px));
   }
 }
