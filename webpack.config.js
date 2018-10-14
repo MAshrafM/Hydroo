@@ -1,12 +1,24 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'docs')
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   },
   module:{
     rules: [
@@ -27,13 +39,16 @@ module.exports = {
       loader: 'image-webpack-loader',
       enforce: 'pre',
       options: {
-        disable: true
+        disable: false
       }
     },
     {
       test: /\.(gif|png|jpg|svg)$/i,
       exclude: /node_modules/,
-      loader: 'url-loader'
+      loader: 'url-loader',
+      options: {
+        limit: 8192
+      }
     },
     {
       test: /\.(html)$/,
