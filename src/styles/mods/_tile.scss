@@ -2,6 +2,7 @@
   position: relative;
   margin-top: 70px;
   margin-bottom: 35px;
+
   @include breakpoint(tablet){
     margin-bottom: 50px;
   }
@@ -65,4 +66,53 @@
   &__heading{
     color: $grey;
   }
+}
+
+.packet{
+  text-align: center;
+  background-color: white;
+  padding: 40px 0 60px;
+  margin-bottom: 50px;
+
+  @include breakpoint(landscape){
+    max-width: 60%;
+    margin: 0 auto 50px;
+  }
+  @include breakpoint(tablet){
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+  &__top{
+    border-bottom: 1px solid $lightGrey;
+    padding-bottom: 40px;
+  }
+
+  &__price{
+    font-size: 4em;
+    font-weight: 900;
+    color: black;
+    position: relative;
+    display: inline-block;
+  }
+
+  &__title{
+    font-size: 1.3em;
+    letter-spacing: 3px;
+  }
+
+  &__features{
+    margin: 40px 0;
+  }
+
+  &__feature{
+    line-height: 2em;
+  }
+}
+
+.index-top{
+  font-size: 1rem;
+  position: absolute;
+  left: -10px;
+  top: -7px;
 }
