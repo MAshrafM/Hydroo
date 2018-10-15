@@ -2,6 +2,7 @@ import "./styles/main.scss";
 
 import Accordion from './scripts/accordion';
 import Parallax from './scripts/parallax';
+import StickyNav from './scripts/sticky_nav';
 
 window.onload = function() {
     // accordion
@@ -12,7 +13,8 @@ window.onload = function() {
     const passionSection = document.getElementById('passion_bg');
     const factsSection = document.getElementById('Factsbg');
     const brandsSection = document.getElementById('Brandsbg');
-
+    // navbar
+    const navbar = document.getElementById('stickyNavbar');
     // create accordion
     let ourMission = new Accordion(accordion, accordionContent, accordionToggle);
     ourMission.initiate(ourMission)
@@ -21,6 +23,10 @@ window.onload = function() {
     let passionParallax = new Parallax('passion_bg');
     let factsParallax = new Parallax('Factsbg');
     let brandsParallax = new Parallax('Brandsbg');
+
+    // navbar position
+    let navbarPos = navbar.offsetTop;
+
     // section visible function
     function isScrolledIntoView(e){
         let elementRect = e.getBoundingClientRect();
@@ -33,6 +39,7 @@ window.onload = function() {
     }
 
     window.addEventListener('scroll', function(){
+        StickyNav(navbar, navbarPos, 'h-header__navbar-main__is-sticky')
         if(isScrolledIntoView(passionSection)) passionParallax.applyParallax();
         if(isScrolledIntoView(factsSection)) factsParallax.applyParallax();
         if(isScrolledIntoView(brandsSection)) brandsParallax.applyParallax();

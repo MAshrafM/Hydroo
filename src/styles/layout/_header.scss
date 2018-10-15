@@ -37,5 +37,19 @@
     @include breakpoint(tablet){
       flex-basis: 50px;
     }
+
+    &__is-sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      height: 70px;
+      @include breakpoint(landscape){
+        height: 50px;
+      }
+      @include breakpoint(tablet){
+        height: 100px;
+      }
+    }
   }
 }
