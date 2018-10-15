@@ -39,3 +39,11 @@
         left: 0;
     }
 }
+
+@for $i from 1 through 10{
+    $width: $i/10*100%;
+
+    .progress-bar__fill__is-#{$i}0p{
+        width: $width;
+    }
+}
