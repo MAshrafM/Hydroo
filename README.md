@@ -4,8 +4,9 @@ Developed for Web with:
 - HTML
 - SCSS
 - JS (Babel 7)
-- Webpack 4
-A Responsive design for different outlets, js functions for scrolling, navigation and animation.
+- Webpack 4  
+A Responsive design for different outlets, js functions for scrolling, navigation and animation. My first use of bundlers instead of task runners.  
+Contact me for the un-optimized assets or the PSD if you can not find it on the net.  
   
 ## Future Works  
 - Activate Links
