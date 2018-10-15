@@ -31,7 +31,7 @@ window.onload = function() {
     const skillsSectionAnimateSetting = {
         element: document.querySelectorAll('.progress-bar__percent'),
         startNum: 0,
-        endNum: [40, 45, 70, 90, 100],
+        endNum: [40, 50, 70, 90, 100],
         duration: 5
     };
     // create accordion

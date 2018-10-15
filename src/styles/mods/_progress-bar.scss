@@ -11,7 +11,7 @@
     }
 
     &__fill{
-        width: 50%;
+        width: 0;
         height: 7px;
         @include transform(translateY(-7px));
         background-color: $turquoise;
@@ -26,7 +26,7 @@
 
         position: absolute;
         top: -25px;
-        right: 0;
+        right: -150px;
     }
 
     &__name{
@@ -45,5 +45,9 @@
 
     .progress-bar__fill__is-#{$i}0p{
         width: $width;
+        .progress-bar__percent{
+            transition: 2s;
+            right: 0;
+        }
     }
 }
